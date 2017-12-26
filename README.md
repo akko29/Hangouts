@@ -42,8 +42,6 @@ Let that terminal open and open a new one. Switch to the `videochat-peerjs-examp
 node peer-server.js
 ```
 
-Open your browser and access the addres: [title](https://localhost:8443) and have fun. For more information, please visit the article of this [example here in Our Code World](http://ourcodeworld.com/articles/read/496/how-to-create-a-videochat-with-webrtc-using-peerjs-and-node-js)
-
 ### Developers 
  * **Mudit Garg** [Linkedin](https://www.linkedin.com/in/mudit-garg8560/) [Facebook](https://www.facebook.com/mudit.garg.50)
  * **Akshat Airan** [Linkedin](https://www.linkedin.com/in/akshat-airan-8391b1109/) [Facebook](https://www.facebook.com/akshat.airan)
