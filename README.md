@@ -11,9 +11,9 @@ A videochat implementation using PeerJS with Node.js
 (1) Node.Js
 (2) MongoDb
 (3) Express
-(4)Angular.Js
-(5)Web RTC
-(6)Peer js
+(4) Angular.Js
+(5) Web RTC
+(6) Peer.js
 ```
 
 # How to use
