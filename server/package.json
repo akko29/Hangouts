@@ -1,0 +1,15 @@
+{
+  "name": "peerjs-videochat-application-server",
+  "version": "1.0.0",
+  "dependencies": {
+    "peer": "^0.2.8"
+  },
+  "main": "peer-server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

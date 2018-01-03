@@ -3,10 +3,10 @@ var http = require("http");
 var path = require("path");
 var https = require("https");
 var os = require("os");
-var network_int = os.networkInterfaces();
+var network_init = os.networkInterfaces();
 
-var privatekey = fs.readFileSync("./../certificates/key.pem",'utf-8');
-var certificate = fs.readFileSync("./../certificate/cert.pem",'utf-8');
+var privatekey = fs.readFileSync("./../certificates/key.pem",'utf8');
+var certificate = fs.readFileSync("./../certificates/cert.pem",'utf8');
 
 var credentials = {key:privatekey, cert: certificate};
 var express = require("express");
@@ -15,10 +15,10 @@ var app = express();
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials,app);
 
-Object.keys(network_init).forEach(function(ifname){
+Object.keys(network_init).forEach(function (ifname){
 	var alias = 0;
-	network_init[ifname].forEach(fucntion(iface){
-		if('IPV4' !== iface.family || iface.internal !== false)
+	network_init[ifname].forEach(function (iface){
+		if('IPv4' !== iface.family || iface.internal !== false)
 		{
 			return;
 		}
@@ -29,7 +29,7 @@ Object.keys(network_init).forEach(function(ifname){
 
         if(alias >= 1)
         {
-        	console.log("Multiple IPV$ address found..");
+        	console.log("Multiple IPV4 address found..");
         	console.log(ifname+':'+alias, "https://"+iface.address+":8443");
         }
         else
@@ -44,9 +44,19 @@ Object.keys(network_init).forEach(function(ifname){
 var LANAccess = "0.0.0.0";
 httpServer.listen(8080,LANAccess);
 httpsServer.listen(8443,LANAccess);
-
 app.get('/',function(req,res){
-	res.sendFile(path.join(__dirname+'index.html'));
+	res.sendFile(path.join(__dirname,'/index.html'));
 });
-
-app.use('/resources',express.static('./source'));
+app.get('/index.html',function(req,res){
+	res.sendFile(path.join(__dirname,'/index.html'));
+});
+app.get('/create.html',function(req,res){
+	res.sendFile(path.join(__dirname,'/create.html'));
+});
+app.get('/join.html',function(req,res){
+	res.sendFile(path.join(__dirname,'/join.html'));
+});
+app.get('/chat.html',function(req,res){
+	res.sendFile(path.join(__dirname,'/chat.html'));
+});
+app.use('/source',express.static(__dirname+'/source'));
