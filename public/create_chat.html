@@ -42,35 +42,30 @@
             <h4 class="text-center">
                 <span id="peer-id-label"></span>
             </h4>
-           <!--  <div class="col-md-12 col-lg-12">
-                <div class="form-horizontal" id="connection-form"> -->
-<!--                     <fieldset>
+            <div class="col-md-12 col-lg-12">
+                <div class="form-horizontal" id="connection-form">
+                    <fieldset>
                         <legend>Connection Form</legend>
-                        <div class="form-group">
-                            <label for="name" class="col-lg-2 control-label">Username</label>
-                            <div class="col-lg-10">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Your random username">
-                            </div>
-                        </div>
+                        
                         <div class="form-group">
                             <label for="peer_id" class="col-lg-2 control-label">Peer ID (id of your pal)</label>
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" name="peer_id" id="peer_id" placeholder="Peer ID" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                                 
                                 <!-- Show message if someone connected to the client -->
-                                <!-- <div id="connected_peer_container" class="hidden">
+                                <div id="connected_peer_container" class="hidden">
                                     An user is already connected to your session. Just provide a name to connect !
-                 waLll               </div>
+                               </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button id="connect-to-peer-btn" class="btn btn-primary">Connect to Peer</button>
+                                <button id="peer-btn" class="btn btn-primary">Connect to Peer</button>
                             </div>
                         </div>
-                    </fieldset>  -->
-                <!-- </div>
-            </div> -->
+                    </fieldset> 
+                </div>
+            </div>
             <div class="col-md-12 col-lg-12">
                 <div id="chat" class="hidden">
                     <div id="messages-container">
@@ -102,7 +97,7 @@
     <script src="source/js/peer.min.js"></script>
 
     <!-- Include the scripts that will handle the chat -->
-    <script src="source/js/script.js"></script>
+    <script src="source/js/script_create.js"></script>
 </body>
 
 </html>

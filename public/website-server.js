@@ -59,4 +59,7 @@ app.get('/join.html',function(req,res){
 app.get('/chat.html',function(req,res){
 	res.sendFile(path.join(__dirname,'/chat.html'));
 });
+app.get('/create_chat.html',function(req,res){
+	res.sendFile(path.join(__dirname,'/create_chat.html'));
+});
 app.use('/source',express.static(__dirname+'/source'));
